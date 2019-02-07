@@ -6,14 +6,12 @@ def homepage(requeest):
                         "<br>"
                         "<a href='/rango/'>Index</href>"
                         "<br>"
-                        "<a href='/rango/about'>About</href>")
+						"<a href='/rango/about/'>About</href>")
 
 def index(request):
-    return HttpResponse("Rango says hey there partner!"
-                        "<br>"
-                        "<a href='/rango/about'>About</href>")
+	context_dict = {'boldmessage': "Crunchy, creamy, cookie, candy, cupcake!"}
+	return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):
-    return HttpResponse("rango says here is the about page"
-                        "<br/>"
-                        "<a href='/rango/'>Index</href>") 
+	context_dict = {'author': "SHENGXIAN LIU: 2284864L"}
+	return render(request, 'rango/about.html', context=context_dict)
