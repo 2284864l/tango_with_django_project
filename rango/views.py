@@ -20,7 +20,7 @@ def index(request):
 
 
 def about(request):
-	context_dict = {'author': "Haowen Li (2327962L)"}
+	context_dict = {'author': "SHENGXIAN LIU: 2284864L"}
 	return render(request, 'rango/about.html', context=context_dict)
 
 def show_category(request, category_name_slug):
